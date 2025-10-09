@@ -1,0 +1,40 @@
+package com.example.eventstrack
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.example.eventstrack.api.Event
+
+class EventAdapter(private var events: List<Event>) :
+    RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
+
+    class EventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val tvName: TextView = itemView.findViewById(R.id.tvName)
+        val tvDate: TextView = itemView.findViewById(R.id.tvDate)
+        val tvLocation: TextView = itemView.findViewById(R.id.tvLocation)
+        val tvDescription: TextView = itemView.findViewById(R.id.tvDescription)
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_event, parent, false)
+        return EventViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: EventViewHolder, position: Int) {
+        val event = events[position]
+        holder.tvName.text = event.title
+        holder.tvDate.text = "📅 ${event.start_utc?:"Date TBA"}"
+        holder.tvLocation.text = "📍 ${event.venue_name?:"Location TBA}"}"
+        holder.tvDescription.text = event.description
+    }
+
+    override fun getItemCount(): Int = events.size
+
+    fun updateData(newEvents: List<Event>) {
+        events = newEvents
+        notifyDataSetChanged()
+    }
+}
