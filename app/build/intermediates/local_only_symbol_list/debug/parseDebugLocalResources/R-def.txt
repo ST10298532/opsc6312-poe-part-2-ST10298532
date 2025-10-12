@@ -10,8 +10,10 @@ id btnEvents
 id btnLogin
 id btnLogout
 id btnRegister
+id btnSave
 id btnSaveRadius
 id btnSaveSettings
+id btnSavedEvents
 id btnSettings
 id btnSignOut
 id btnSubmitEvent
@@ -27,6 +29,7 @@ id etUsername
 id main
 id progressBar
 id progressBarAddEvent
+id progressBarSaved
 id rbDark
 id rbEnglish
 id rbLight
@@ -34,6 +37,7 @@ id rbZulu
 id rgLanguage
 id rgTheme
 id rvEvents
+id rvSavedEvents
 id switchNotifications
 id tvDate
 id tvDescription
@@ -48,6 +52,7 @@ layout activity_home_activity
 layout activity_login
 layout activity_main
 layout activity_register
+layout activity_saved_events
 layout activity_settings
 layout item_event
 mipmap ic_launcher

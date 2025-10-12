@@ -13,6 +13,7 @@ class HomeActivity : AppCompatActivity() {
         // Buttons to navigate to other pages
         val btnEvents = findViewById<Button>(R.id.btnEvents)
         val btnSettings = findViewById<Button>(R.id.btnSettings)
+        val btnSavedEvents = findViewById<Button>(R.id.btnSavedEvents)
         val btnLogout = findViewById<Button>(R.id.btnLogout)
 
         btnEvents.setOnClickListener {
@@ -22,6 +23,11 @@ class HomeActivity : AppCompatActivity() {
         btnSettings.setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))
         }
+
+        btnSavedEvents.setOnClickListener {
+            startActivity(Intent(this, SavedEventsActivity::class.java))
+        }
+
 
         btnLogout.setOnClickListener {
             val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)

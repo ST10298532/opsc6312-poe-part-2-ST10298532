@@ -1,34 +1,38 @@
 [
     {
-        "merged": "C:\\Users\\jayde\\.gradle\\daemon\\8.13\\com.example.eventstrack.app-mergeDebugResources-44:\\layout\\activity_register.xml",
-        "source": "C:\\Users\\jayde\\.gradle\\daemon\\8.13\\com.example.eventstrack.app-main-47:\\layout\\activity_register.xml"
+        "merged": "com.example.eventstrack.app-mergeDebugResources-44:/layout/activity_add_event.xml",
+        "source": "com.example.eventstrack.app-main-47:/layout/activity_add_event.xml"
     },
     {
-        "merged": "C:\\Users\\jayde\\.gradle\\daemon\\8.13\\com.example.eventstrack.app-mergeDebugResources-44:\\layout\\activity_events.xml",
-        "source": "C:\\Users\\jayde\\.gradle\\daemon\\8.13\\com.example.eventstrack.app-main-47:\\layout\\activity_events.xml"
+        "merged": "com.example.eventstrack.app-mergeDebugResources-44:/layout/activity_register.xml",
+        "source": "com.example.eventstrack.app-main-47:/layout/activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\jayde\\.gradle\\daemon\\8.13\\com.example.eventstrack.app-mergeDebugResources-44:\\layout\\activity_add_event.xml",
-        "source": "C:\\Users\\jayde\\.gradle\\daemon\\8.13\\com.example.eventstrack.app-main-47:\\layout\\activity_add_event.xml"
+        "merged": "com.example.eventstrack.app-mergeDebugResources-44:/layout/item_event.xml",
+        "source": "com.example.eventstrack.app-main-47:/layout/item_event.xml"
     },
     {
-        "merged": "C:\\Users\\jayde\\.gradle\\daemon\\8.13\\com.example.eventstrack.app-mergeDebugResources-44:\\layout\\activity_settings.xml",
-        "source": "C:\\Users\\jayde\\.gradle\\daemon\\8.13\\com.example.eventstrack.app-main-47:\\layout\\activity_settings.xml"
+        "merged": "com.example.eventstrack.app-mergeDebugResources-44:/layout/activity_saved_events.xml",
+        "source": "com.example.eventstrack.app-main-47:/layout/activity_saved_events.xml"
     },
     {
-        "merged": "C:\\Users\\jayde\\.gradle\\daemon\\8.13\\com.example.eventstrack.app-mergeDebugResources-44:\\layout\\item_event.xml",
-        "source": "C:\\Users\\jayde\\.gradle\\daemon\\8.13\\com.example.eventstrack.app-main-47:\\layout\\item_event.xml"
+        "merged": "com.example.eventstrack.app-mergeDebugResources-44:/layout/activity_settings.xml",
+        "source": "com.example.eventstrack.app-main-47:/layout/activity_settings.xml"
     },
     {
-        "merged": "C:\\Users\\jayde\\.gradle\\daemon\\8.13\\com.example.eventstrack.app-mergeDebugResources-44:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\jayde\\.gradle\\daemon\\8.13\\com.example.eventstrack.app-main-47:\\layout\\activity_main.xml"
+        "merged": "com.example.eventstrack.app-mergeDebugResources-44:/layout/activity_main.xml",
+        "source": "com.example.eventstrack.app-main-47:/layout/activity_main.xml"
     },
     {
         "merged": "com.example.eventstrack.app-mergeDebugResources-44:/layout/activity_home_activity.xml",
         "source": "com.example.eventstrack.app-main-47:/layout/activity_home_activity.xml"
     },
     {
-        "merged": "C:\\Users\\jayde\\.gradle\\daemon\\8.13\\com.example.eventstrack.app-mergeDebugResources-44:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\jayde\\.gradle\\daemon\\8.13\\com.example.eventstrack.app-main-47:\\layout\\activity_login.xml"
+        "merged": "com.example.eventstrack.app-mergeDebugResources-44:/layout/activity_login.xml",
+        "source": "com.example.eventstrack.app-main-47:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.eventstrack.app-mergeDebugResources-44:/layout/activity_events.xml",
+        "source": "com.example.eventstrack.app-main-47:/layout/activity_events.xml"
     }
 ]

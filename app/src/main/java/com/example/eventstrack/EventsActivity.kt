@@ -28,11 +28,31 @@ class EventsActivity : AppCompatActivity() {
         rvEvents = findViewById(R.id.rvEvents)
         progressBar = findViewById(R.id.progressBar)
 
-        adapter = EventAdapter(emptyList())
+        adapter = EventAdapter(emptyList(), this) { event, isSaved ->
+            val prefs = getSharedPreferences("saved_events", MODE_PRIVATE)
+            val saved = prefs.getStringSet("event_ids", mutableSetOf())?.toMutableSet() ?: mutableSetOf()
+
+            if (isSaved) {
+                saved.remove(event.id.toString())
+                Toast.makeText(this, "Event removed", Toast.LENGTH_SHORT).show()
+            } else {
+                saved.add(event.id.toString())
+                Toast.makeText(this, "Event saved!", Toast.LENGTH_SHORT).show()
+            }
+
+            prefs.edit().putStringSet("event_ids", saved).apply()
+        }
+
         rvEvents.layoutManager = LinearLayoutManager(this)
         rvEvents.adapter = adapter
 
         fetchEvents()
+
+        val btnSavedEvents = findViewById<Button>(R.id.btnSavedEvents)
+        btnSavedEvents.setOnClickListener {
+            val intent = Intent(this, SavedEventsActivity::class.java)
+            startActivity(intent)
+        }
 
         val btnLogout = findViewById<Button>(R.id.btnLogout)
         btnLogout.setOnClickListener {
@@ -44,6 +64,7 @@ class EventsActivity : AppCompatActivity() {
             val intent = Intent(this, AddEventActivity::class.java)
             startActivity(intent)
         }
+
     }
 
     private fun fetchEvents() {
@@ -85,4 +106,14 @@ class EventsActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+    private fun saveEventLocally(event: Event) {
+        val prefs = getSharedPreferences("saved_events", MODE_PRIVATE)
+        val saved = prefs.getStringSet("event_ids", mutableSetOf()) ?: mutableSetOf()
+        saved.add(event.id.toString())
+        prefs.edit().putStringSet("event_ids", saved).apply()
+
+        Toast.makeText(this, "Event saved!", Toast.LENGTH_SHORT).show()
+    }
+
 }

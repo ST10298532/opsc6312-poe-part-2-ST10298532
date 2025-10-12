@@ -29,6 +29,9 @@ public final class ActivityEventsBinding implements ViewBinding {
   public final Button btnLogout;
 
   @NonNull
+  public final Button btnSavedEvents;
+
+  @NonNull
   public final ProgressBar progressBar;
 
   @NonNull
@@ -38,11 +41,12 @@ public final class ActivityEventsBinding implements ViewBinding {
   public final TextView tvTitle;
 
   private ActivityEventsBinding(@NonNull LinearLayout rootView, @NonNull Button btnAddEvent,
-      @NonNull Button btnLogout, @NonNull ProgressBar progressBar, @NonNull RecyclerView rvEvents,
-      @NonNull TextView tvTitle) {
+      @NonNull Button btnLogout, @NonNull Button btnSavedEvents, @NonNull ProgressBar progressBar,
+      @NonNull RecyclerView rvEvents, @NonNull TextView tvTitle) {
     this.rootView = rootView;
     this.btnAddEvent = btnAddEvent;
     this.btnLogout = btnLogout;
+    this.btnSavedEvents = btnSavedEvents;
     this.progressBar = progressBar;
     this.rvEvents = rvEvents;
     this.tvTitle = tvTitle;
@@ -87,6 +91,12 @@ public final class ActivityEventsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnSavedEvents;
+      Button btnSavedEvents = ViewBindings.findChildViewById(rootView, id);
+      if (btnSavedEvents == null) {
+        break missingId;
+      }
+
       id = R.id.progressBar;
       ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
       if (progressBar == null) {
@@ -105,8 +115,8 @@ public final class ActivityEventsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityEventsBinding((LinearLayout) rootView, btnAddEvent, btnLogout, progressBar,
-          rvEvents, tvTitle);
+      return new ActivityEventsBinding((LinearLayout) rootView, btnAddEvent, btnLogout,
+          btnSavedEvents, progressBar, rvEvents, tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

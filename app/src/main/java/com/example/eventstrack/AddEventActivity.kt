@@ -39,12 +39,12 @@ class AddEventActivity : AppCompatActivity() {
     }
 
     private fun createEvent() {
-        val name = etEventName.text.toString().trim()
+        val title = etEventName.text.toString().trim()
         val date = etDate.text.toString().trim()
-        val location = etLocation.text.toString().trim()
+        val venue = etLocation.text.toString().trim()
         val description = etDescription.text.toString().trim()
 
-        if (name.isEmpty() || date.isEmpty() || location.isEmpty() || description.isEmpty()) {
+        if (title.isEmpty() || date.isEmpty() || venue.isEmpty() || description.isEmpty()) {
             Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             return
         }
@@ -52,23 +52,33 @@ class AddEventActivity : AppCompatActivity() {
         progressBar.visibility = View.VISIBLE
 
         val eventApi = ApiClient.instance.create(EventApi::class.java)
-        val eventRequest = EventRequest(name, date, location, description)
 
-        eventApi.createEvent(eventRequest).enqueue(object : Callback<Event> {
+        // ✅ Match JSON keys the backend expects
+        val newEvent = EventRequest(
+            title = title,
+            description = description,
+            category = "General",
+            start_utc = date,
+            end_utc = date,
+            venue_name = venue
+        )
+
+        eventApi.createEvent(newEvent).enqueue(object : Callback<Event> {
             override fun onResponse(call: Call<Event>, response: Response<Event>) {
                 progressBar.visibility = View.GONE
                 if (response.isSuccessful) {
-                    Toast.makeText(this@AddEventActivity, "Event created successfully!", Toast.LENGTH_SHORT).show()
-                    finish()  // Go back to previous screen
+                    Toast.makeText(this@AddEventActivity, "✅ Event created successfully!", Toast.LENGTH_SHORT).show()
+                    finish()
                 } else {
-                    Toast.makeText(this@AddEventActivity, "Failed to create event", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@AddEventActivity, "⚠️ Failed to create event (${response.code()})", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onFailure(call: Call<Event>, t: Throwable) {
                 progressBar.visibility = View.GONE
-                Toast.makeText(this@AddEventActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@AddEventActivity, "❌ Error: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
     }
+
 }

@@ -38,6 +38,14 @@
         android:padding="8dp" />
 
     <Button
+        android:id="@+id/btnSavedEvents"
+        android:text="View Saved Events"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"/>
+
+
+    <Button
         android:id="@+id/btnLogout"
         android:text="Logout"
         android:layout_width="wrap_content"

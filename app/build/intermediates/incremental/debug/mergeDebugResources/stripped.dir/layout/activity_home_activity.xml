@@ -29,6 +29,14 @@
         android:layout_height="wrap_content"/>
 
     <Button
+        android:id="@+id/btnSavedEvents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Saved Events"
+        android:layout_marginTop="8dp"/>
+
+
+    <Button
         android:id="@+id/btnLogout"
         android:text="Sign Out"
         android:layout_width="match_parent"

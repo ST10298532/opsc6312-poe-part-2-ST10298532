@@ -3768,8 +3768,10 @@ id btnEvents
 id btnLogin
 id btnLogout
 id btnRegister
+id btnSave
 id btnSaveRadius
 id btnSaveSettings
+id btnSavedEvents
 id btnSettings
 id btnSignOut
 id btnSubmitEvent
@@ -4049,6 +4051,7 @@ id postLayout
 id pressed
 id progressBar
 id progressBarAddEvent
+id progressBarSaved
 id progress_circular
 id progress_horizontal
 id radio
@@ -4070,6 +4073,7 @@ id right_side
 id rounded
 id row_index_key
 id rvEvents
+id rvSavedEvents
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -4340,6 +4344,7 @@ layout activity_home_activity
 layout activity_login
 layout activity_main
 layout activity_register
+layout activity_saved_events
 layout activity_settings
 layout custom_dialog
 layout design_bottom_navigation_item

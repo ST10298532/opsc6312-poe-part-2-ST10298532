@@ -26,13 +26,17 @@ public final class ActivityHomeActivityBinding implements ViewBinding {
   public final Button btnLogout;
 
   @NonNull
+  public final Button btnSavedEvents;
+
+  @NonNull
   public final Button btnSettings;
 
   private ActivityHomeActivityBinding(@NonNull LinearLayout rootView, @NonNull Button btnEvents,
-      @NonNull Button btnLogout, @NonNull Button btnSettings) {
+      @NonNull Button btnLogout, @NonNull Button btnSavedEvents, @NonNull Button btnSettings) {
     this.rootView = rootView;
     this.btnEvents = btnEvents;
     this.btnLogout = btnLogout;
+    this.btnSavedEvents = btnSavedEvents;
     this.btnSettings = btnSettings;
   }
 
@@ -75,6 +79,12 @@ public final class ActivityHomeActivityBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnSavedEvents;
+      Button btnSavedEvents = ViewBindings.findChildViewById(rootView, id);
+      if (btnSavedEvents == null) {
+        break missingId;
+      }
+
       id = R.id.btnSettings;
       Button btnSettings = ViewBindings.findChildViewById(rootView, id);
       if (btnSettings == null) {
@@ -82,7 +92,7 @@ public final class ActivityHomeActivityBinding implements ViewBinding {
       }
 
       return new ActivityHomeActivityBinding((LinearLayout) rootView, btnEvents, btnLogout,
-          btnSettings);
+          btnSavedEvents, btnSettings);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

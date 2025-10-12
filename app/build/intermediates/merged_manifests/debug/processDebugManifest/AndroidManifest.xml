@@ -37,6 +37,9 @@
         android:theme="@style/Theme.EventsTrack"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.eventstrack.SavedEventsActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.eventstrack.HomeActivity"
             android:exported="false" />
         <activity
