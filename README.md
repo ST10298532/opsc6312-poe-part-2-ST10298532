@@ -1,7 +1,7 @@
 # 📱 EventsTrack – OPSC6312 POE Part 2
 
 **Student:** ST10298532  
-**Module:** OPSC6312 – Mobile Application Development  
+**Module:** OPSC6312 – Open Source Coding (Intermediate)
 **Project:** EventsTrack (Android + Node.js API)  
 **Part:** 2 – Prototype Implementation & GitHub Version Control  
 
