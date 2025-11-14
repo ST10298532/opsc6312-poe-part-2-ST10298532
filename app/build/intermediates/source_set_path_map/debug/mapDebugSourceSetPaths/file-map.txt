@@ -39,10 +39,10 @@ com.example.eventstrack.app-lifecycle-livedata-2.6.2-37 C:\Users\jayde\.gradle\c
 com.example.eventstrack.app-core-runtime-2.2.0-38 C:\Users\jayde\.gradle\caches\8.13\transforms\f5ea5dddcf67ac295ce0580168e18976\transformed\core-runtime-2.2.0\res
 com.example.eventstrack.app-lifecycle-viewmodel-savedstate-2.6.2-39 C:\Users\jayde\.gradle\caches\8.13\transforms\f9c4554d8ce92250c25a9cd4d90fb4a2\transformed\lifecycle-viewmodel-savedstate-2.6.2\res
 com.example.eventstrack.app-lifecycle-runtime-2.6.2-40 C:\Users\jayde\.gradle\caches\8.13\transforms\fe91ff0c9c5bf77b57d84d76fe27a71d\transformed\lifecycle-runtime-2.6.2\res
-com.example.eventstrack.app-pngs-41 C:\Users\jayde\OneDrive - Rise Car Rental (Pty) Ltd\Desktop\EventsTrack\app\build\generated\res\pngs\debug
-com.example.eventstrack.app-resValues-42 C:\Users\jayde\OneDrive - Rise Car Rental (Pty) Ltd\Desktop\EventsTrack\app\build\generated\res\resValues\debug
-com.example.eventstrack.app-packageDebugResources-43 C:\Users\jayde\OneDrive - Rise Car Rental (Pty) Ltd\Desktop\EventsTrack\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.eventstrack.app-packageDebugResources-44 C:\Users\jayde\OneDrive - Rise Car Rental (Pty) Ltd\Desktop\EventsTrack\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.eventstrack.app-debug-45 C:\Users\jayde\OneDrive - Rise Car Rental (Pty) Ltd\Desktop\EventsTrack\app\build\intermediates\merged_res\debug\mergeDebugResources
-com.example.eventstrack.app-debug-46 C:\Users\jayde\OneDrive - Rise Car Rental (Pty) Ltd\Desktop\EventsTrack\app\src\debug\res
-com.example.eventstrack.app-main-47 C:\Users\jayde\OneDrive - Rise Car Rental (Pty) Ltd\Desktop\EventsTrack\app\src\main\res
+com.example.eventstrack.app-pngs-41 C:\Users\jayde\AndroidStudioProjects\EventsTrack\app\build\generated\res\pngs\debug
+com.example.eventstrack.app-resValues-42 C:\Users\jayde\AndroidStudioProjects\EventsTrack\app\build\generated\res\resValues\debug
+com.example.eventstrack.app-packageDebugResources-43 C:\Users\jayde\AndroidStudioProjects\EventsTrack\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.eventstrack.app-packageDebugResources-44 C:\Users\jayde\AndroidStudioProjects\EventsTrack\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.eventstrack.app-debug-45 C:\Users\jayde\AndroidStudioProjects\EventsTrack\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.eventstrack.app-debug-46 C:\Users\jayde\AndroidStudioProjects\EventsTrack\app\src\debug\res
+com.example.eventstrack.app-main-47 C:\Users\jayde\AndroidStudioProjects\EventsTrack\app\src\main\res

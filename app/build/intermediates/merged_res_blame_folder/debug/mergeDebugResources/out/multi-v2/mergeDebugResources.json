@@ -2672,23 +2672,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jayde\\OneDrive - Rise Car Rental (Pty) Ltd\\Desktop\\EventsTrack\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "2,4,3",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,139,97",
-                        "endColumns": "41,44,41",
-                        "endOffsets": "92,179,134"
-                    },
-                    "to": {
-                        "startLines": "720,1175,1188",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "38060,69812,70675",
-                        "endColumns": "41,44,41",
-                        "endOffsets": "38097,69852,70712"
-                    }
-                },
-                {
                     "source": "C:\\Users\\jayde\\.gradle\\caches\\8.13\\transforms\\0e71cc4250a2d019e6af228af52013cc\\transformed\\drawerlayout-1.1.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5",
@@ -2705,6 +2688,23 @@
                         "endLines": "157,160,1282,12724",
                         "endColumns": "55,47,51,24",
                         "endOffsets": "8161,8317,76991,825316"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jayde\\AndroidStudioProjects\\EventsTrack\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "2,4,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,139,97",
+                        "endColumns": "41,44,41",
+                        "endOffsets": "92,179,134"
+                    },
+                    "to": {
+                        "startLines": "720,1175,1188",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "38060,69812,70675",
+                        "endColumns": "41,44,41",
+                        "endOffsets": "38097,69852,70712"
                     }
                 },
                 {
@@ -2758,6 +2758,25 @@
                         "startOffsets": "152552,152592,153816,154040,154095,155705,155750,155804,155860,155912,155964,156013,156074",
                         "endColumns": "39,46,42,54,46,44,53,55,51,51,48,60,49",
                         "endOffsets": "152587,152634,153854,154090,154137,155745,155799,155855,155907,155959,156008,156069,156119"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jayde\\AndroidStudioProjects\\EventsTrack\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "100,326",
+                        "endLines": "5,7",
+                        "endColumns": "12,70",
+                        "endOffsets": "320,392"
+                    },
+                    "to": {
+                        "startLines": "2940,7418",
+                        "startColumns": "4,4",
+                        "startOffsets": "206913,526878",
+                        "endLines": "2943,7418",
+                        "endColumns": "12,69",
+                        "endOffsets": "207027,526943"
                     }
                 },
                 {
@@ -2850,6 +2869,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\jayde\\AndroidStudioProjects\\EventsTrack\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "49",
+                        "endOffsets": "61"
+                    },
+                    "to": {
+                        "startLines": "2442",
+                        "startColumns": "4",
+                        "startOffsets": "163602",
+                        "endColumns": "49",
+                        "endOffsets": "163647"
+                    }
+                },
+                {
                     "source": "C:\\Users\\jayde\\.gradle\\caches\\8.13\\transforms\\fe91ff0c9c5bf77b57d84d76fe27a71d\\transformed\\lifecycle-runtime-2.6.2\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -2917,42 +2953,6 @@
                         "startOffsets": "156249",
                         "endColumns": "42",
                         "endOffsets": "156287"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\jayde\\OneDrive - Rise Car Rental (Pty) Ltd\\Desktop\\EventsTrack\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "49",
-                        "endOffsets": "61"
-                    },
-                    "to": {
-                        "startLines": "2442",
-                        "startColumns": "4",
-                        "startOffsets": "163602",
-                        "endColumns": "49",
-                        "endOffsets": "163647"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\jayde\\OneDrive - Rise Car Rental (Pty) Ltd\\Desktop\\EventsTrack\\app\\src\\main\\res\\values\\themes.xml",
-                    "from": {
-                        "startLines": "2,7",
-                        "startColumns": "4,4",
-                        "startOffsets": "100,326",
-                        "endLines": "5,7",
-                        "endColumns": "12,70",
-                        "endOffsets": "320,392"
-                    },
-                    "to": {
-                        "startLines": "2940,7418",
-                        "startColumns": "4,4",
-                        "startOffsets": "206913,526878",
-                        "endLines": "2943,7418",
-                        "endColumns": "12,69",
-                        "endOffsets": "207027,526943"
                     }
                 },
                 {
@@ -3973,24 +3973,7 @@
             "outputFile": "com.example.eventstrack.app-debug-45:/values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\jayde\\.gradle\\caches\\8.13\\transforms\\e3174ff1ae44f12f4eb8cedf72458ca0\\transformed\\appcompat-1.7.1\\res\\values-night-v8\\values-night-v8.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,125,209,293,389,491,593,687",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "120,204,288,384,486,588,682,771"
-                    },
-                    "to": {
-                        "startLines": "6,7,8,9,10,11,12,39",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "174,244,328,412,508,610,712,3694",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "239,323,407,503,605,707,801,3778"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\jayde\\OneDrive - Rise Car Rental (Pty) Ltd\\Desktop\\EventsTrack\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\jayde\\AndroidStudioProjects\\EventsTrack\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -4006,6 +3989,23 @@
                         "endLines": "5",
                         "endColumns": "12",
                         "endOffsets": "169"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jayde\\.gradle\\caches\\8.13\\transforms\\e3174ff1ae44f12f4eb8cedf72458ca0\\transformed\\appcompat-1.7.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "6,7,8,9,10,11,12,39",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "174,244,328,412,508,610,712,3694",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "239,323,407,503,605,707,801,3778"
                     }
                 },
                 {
