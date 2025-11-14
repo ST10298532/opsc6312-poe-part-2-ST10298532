@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eventstrack.api.*
-
+import com.example.eventstrack.utils.LocaleHelper
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -22,6 +22,11 @@ class EventsActivity : AppCompatActivity() {
     private lateinit var adapter: EventAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Load selected language from preferences
+        val prefs = getSharedPreferences("settings", MODE_PRIVATE)
+        val lang = prefs.getString("language", "en")
+        LocaleHelper.setLocale(this, lang!!)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_events)
 
@@ -29,8 +34,8 @@ class EventsActivity : AppCompatActivity() {
         progressBar = findViewById(R.id.progressBar)
 
         adapter = EventAdapter(emptyList(), this) { event, isSaved ->
-            val prefs = getSharedPreferences("saved_events", MODE_PRIVATE)
-            val saved = prefs.getStringSet("event_ids", mutableSetOf())?.toMutableSet() ?: mutableSetOf()
+            val savedPrefs = getSharedPreferences("saved_events", MODE_PRIVATE)
+            val saved = savedPrefs.getStringSet("event_ids", mutableSetOf())?.toMutableSet() ?: mutableSetOf()
 
             if (isSaved) {
                 saved.remove(event.id.toString())
@@ -40,7 +45,7 @@ class EventsActivity : AppCompatActivity() {
                 Toast.makeText(this, "Event saved!", Toast.LENGTH_SHORT).show()
             }
 
-            prefs.edit().putStringSet("event_ids", saved).apply()
+            savedPrefs.edit().putStringSet("event_ids", saved).apply()
         }
 
         rvEvents.layoutManager = LinearLayoutManager(this)
@@ -48,23 +53,17 @@ class EventsActivity : AppCompatActivity() {
 
         fetchEvents()
 
-        val btnSavedEvents = findViewById<Button>(R.id.btnSavedEvents)
-        btnSavedEvents.setOnClickListener {
-            val intent = Intent(this, SavedEventsActivity::class.java)
-            startActivity(intent)
+        findViewById<Button>(R.id.btnSavedEvents).setOnClickListener {
+            startActivity(Intent(this, SavedEventsActivity::class.java))
         }
 
-        val btnLogout = findViewById<Button>(R.id.btnLogout)
-        btnLogout.setOnClickListener {
+        findViewById<Button>(R.id.btnLogout).setOnClickListener {
             logoutUser()
         }
 
-        val btnAddEvent = findViewById<Button>(R.id.btnAddEvent)
-        btnAddEvent.setOnClickListener {
-            val intent = Intent(this, AddEventActivity::class.java)
-            startActivity(intent)
+        findViewById<Button>(R.id.btnAddEvent).setOnClickListener {
+            startActivity(Intent(this, AddEventActivity::class.java))
         }
-
     }
 
     private fun fetchEvents() {
@@ -95,9 +94,7 @@ class EventsActivity : AppCompatActivity() {
 
     private fun logoutUser() {
         val sharedPrefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
-        val editor = sharedPrefs.edit()
-        editor.remove("jwt_token")  // clear the saved login token
-        editor.apply()
+        sharedPrefs.edit().remove("jwt_token").apply()
 
         Toast.makeText(this, "Logged out successfully!", Toast.LENGTH_SHORT).show()
 
@@ -109,11 +106,10 @@ class EventsActivity : AppCompatActivity() {
 
     private fun saveEventLocally(event: Event) {
         val prefs = getSharedPreferences("saved_events", MODE_PRIVATE)
-        val saved = prefs.getStringSet("event_ids", mutableSetOf()) ?: mutableSetOf()
+        val saved = prefs.getStringSet("event_ids", mutableSetOf())?.toMutableSet() ?: mutableSetOf()
         saved.add(event.id.toString())
         prefs.edit().putStringSet("event_ids", saved).apply()
 
         Toast.makeText(this, "Event saved!", Toast.LENGTH_SHORT).show()
     }
-
 }

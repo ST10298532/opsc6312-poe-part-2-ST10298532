@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.eventstrack.app-mergeDebugResources-43:/values-en-rIN/values-en-rIN.xml",
+            "outputFile": "com.example.eventstrack.app-mergeDebugResources-48:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jayde\\.gradle\\caches\\8.13\\transforms\\e3174ff1ae44f12f4eb8cedf72458ca0\\transformed\\appcompat-1.7.1\\res\\values-en-rIN\\values-en-rIN.xml",
+                    "source": "C:\\Users\\jayde\\.gradle\\caches\\8.11.1\\transforms\\1bce36b0ff991ec701c50101c13c8275\\transformed\\appcompat-1.7.1\\res\\values-en-rIN\\values-en-rIN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jayde\\.gradle\\caches\\8.13\\transforms\\13c1ed4ee82cdd71588047066c1e848e\\transformed\\core-1.17.0\\res\\values-en-rIN\\values-en-rIN.xml",
+                    "source": "C:\\Users\\jayde\\.gradle\\caches\\8.11.1\\transforms\\e62ec4f2565b189bcb23e614d910cbf3\\transformed\\core-1.17.0\\res\\values-en-rIN\\values-en-rIN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

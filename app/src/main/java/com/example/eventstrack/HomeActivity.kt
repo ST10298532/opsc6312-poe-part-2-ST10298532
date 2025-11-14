@@ -4,9 +4,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.eventstrack.utils.LocaleHelper
+
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        // 🔥 Load saved language BEFORE super.onCreate()
+        val prefs = getSharedPreferences("settings", MODE_PRIVATE)
+        val lang = prefs.getString("language", "en")
+        LocaleHelper.setLocale(this, lang!!)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_activity)
 
@@ -27,7 +35,6 @@ class HomeActivity : AppCompatActivity() {
         btnSavedEvents.setOnClickListener {
             startActivity(Intent(this, SavedEventsActivity::class.java))
         }
-
 
         btnLogout.setOnClickListener {
             val prefs = getSharedPreferences("user_prefs", MODE_PRIVATE)

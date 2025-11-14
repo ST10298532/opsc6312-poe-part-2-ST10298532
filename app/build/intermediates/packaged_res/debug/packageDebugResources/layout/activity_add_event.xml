@@ -35,6 +35,13 @@
             android:minLines="3"/>
 
         <Button
+            android:id="@+id/btnSelectImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Image" />
+
+
+        <Button
             android:id="@+id/btnSubmitEvent"
             android:text="Create Event"
             android:layout_width="match_parent"

@@ -14,6 +14,7 @@ id btnSave
 id btnSaveRadius
 id btnSaveSettings
 id btnSavedEvents
+id btnSelectImage
 id btnSettings
 id btnSignOut
 id btnSubmitEvent
@@ -58,6 +59,17 @@ layout item_event
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string events
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
+string language
+string login
+string project_id
+string settings
+string sign_out
 style Base.Theme.EventsTrack
 style Theme.EventsTrack
 xml backup_rules

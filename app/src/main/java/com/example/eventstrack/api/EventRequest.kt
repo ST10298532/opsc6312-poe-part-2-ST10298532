@@ -9,5 +9,5 @@ data class EventRequest(
     val venue_name: String,
     val lat: Double = 0.0,
     val lng: Double = 0.0,
-    val image_url: String = ""
+    val image_url: String? = null
 )

@@ -22,6 +22,9 @@ public final class ActivityAddEventBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
+  public final Button btnSelectImage;
+
+  @NonNull
   public final Button btnSubmitEvent;
 
   @NonNull
@@ -39,10 +42,12 @@ public final class ActivityAddEventBinding implements ViewBinding {
   @NonNull
   public final ProgressBar progressBarAddEvent;
 
-  private ActivityAddEventBinding(@NonNull ScrollView rootView, @NonNull Button btnSubmitEvent,
-      @NonNull EditText etDate, @NonNull EditText etDescription, @NonNull EditText etEventName,
-      @NonNull EditText etLocation, @NonNull ProgressBar progressBarAddEvent) {
+  private ActivityAddEventBinding(@NonNull ScrollView rootView, @NonNull Button btnSelectImage,
+      @NonNull Button btnSubmitEvent, @NonNull EditText etDate, @NonNull EditText etDescription,
+      @NonNull EditText etEventName, @NonNull EditText etLocation,
+      @NonNull ProgressBar progressBarAddEvent) {
     this.rootView = rootView;
+    this.btnSelectImage = btnSelectImage;
     this.btnSubmitEvent = btnSubmitEvent;
     this.etDate = etDate;
     this.etDescription = etDescription;
@@ -78,6 +83,12 @@ public final class ActivityAddEventBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnSelectImage;
+      Button btnSelectImage = ViewBindings.findChildViewById(rootView, id);
+      if (btnSelectImage == null) {
+        break missingId;
+      }
+
       id = R.id.btnSubmitEvent;
       Button btnSubmitEvent = ViewBindings.findChildViewById(rootView, id);
       if (btnSubmitEvent == null) {
@@ -114,8 +125,8 @@ public final class ActivityAddEventBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityAddEventBinding((ScrollView) rootView, btnSubmitEvent, etDate,
-          etDescription, etEventName, etLocation, progressBarAddEvent);
+      return new ActivityAddEventBinding((ScrollView) rootView, btnSelectImage, btnSubmitEvent,
+          etDate, etDescription, etEventName, etLocation, progressBarAddEvent);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,5 +1,5 @@
-com.example.eventstrack.test.app-tracing-1.2.0-0 C:\Users\jayde\.gradle\caches\8.13\transforms\22feeea7988f20cffab91d1aae42005d\transformed\tracing-1.2.0\res
-com.example.eventstrack.test.app-core-1.7.0-1 C:\Users\jayde\.gradle\caches\8.13\transforms\9ac55aa2db136e1757d46fe74f59fc69\transformed\core-1.7.0\res
+com.example.eventstrack.test.app-core-1.7.0-0 C:\Users\jayde\.gradle\caches\8.11.1\transforms\aad4972ddf3d445498e60e6eca6b4a43\transformed\core-1.7.0\res
+com.example.eventstrack.test.app-tracing-1.2.0-1 C:\Users\jayde\.gradle\caches\8.11.1\transforms\e4a111eca16c1ce476b8bf156af756d8\transformed\tracing-1.2.0\res
 com.example.eventstrack.test.app-androidTest-2 C:\Users\jayde\AndroidStudioProjects\EventsTrack\app\build\generated\res\resValues\androidTest\debug
 com.example.eventstrack.test.app-mergeDebugAndroidTestResources-3 C:\Users\jayde\AndroidStudioProjects\EventsTrack\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
 com.example.eventstrack.test.app-mergeDebugAndroidTestResources-4 C:\Users\jayde\AndroidStudioProjects\EventsTrack\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir

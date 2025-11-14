@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.eventstrack.api.*
+import com.example.eventstrack.utils.LocaleHelper
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -12,6 +13,11 @@ import retrofit2.Response
 class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Load saved language preference
+        val prefs = getSharedPreferences("settings", MODE_PRIVATE)
+        val lang = prefs.getString("language", "en")
+        LocaleHelper.setLocale(this, lang!!)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
@@ -37,7 +43,6 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "Password must be at least 6 characters", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-
 
             val request = RegisterRequest(username, email, password)
             authApi.register(request).enqueue(object : Callback<AuthResponse> {

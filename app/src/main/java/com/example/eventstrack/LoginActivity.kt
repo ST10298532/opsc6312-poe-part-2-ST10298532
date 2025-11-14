@@ -9,7 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.eventstrack.api.*
-
+import com.example.eventstrack.utils.LocaleHelper
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -17,6 +17,11 @@ import retrofit2.Response
 class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Load saved language preference
+        val prefs = getSharedPreferences("settings", MODE_PRIVATE)
+        val lang = prefs.getString("language", "en")
+        LocaleHelper.setLocale(this, lang!!)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
@@ -54,16 +59,11 @@ class LoginActivity : AppCompatActivity() {
 
                         Toast.makeText(this@LoginActivity, "Login successful!", Toast.LENGTH_SHORT).show()
                         Log.d("TOKEN", response.body()?.token ?: "")
-                        // You can navigate to the main dashboard here later
-
-                        // Store token securely (next step explains this)
-                        //saveToken(token)
 
                         // Navigate to the HomeActivity
                         val intent = Intent(this@LoginActivity, HomeActivity::class.java)
                         startActivity(intent)
                         finish()  // prevent going back to login
-
                     } else {
                         Toast.makeText(this@LoginActivity, "Invalid credentials", Toast.LENGTH_SHORT).show()
                     }
@@ -76,16 +76,12 @@ class LoginActivity : AppCompatActivity() {
         }
 
         tvRegisterLink.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
 
     private fun saveToken(token: String) {
         val sharedPrefs = getSharedPreferences("user_prefs", MODE_PRIVATE)
-        val editor = sharedPrefs.edit()
-        editor.putString("jwt_token", token)
-        editor.apply()
+        sharedPrefs.edit().putString("jwt_token", token).apply()
     }
-
 }

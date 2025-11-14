@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">EventsTrack</string>
+    <string name="welcome">Siyakwamukela</string>
+    <string name="login">Ngena</string>
+    <string name="register">Bhalisa</string>
+    <string name="email">Ikheli le-imeyili</string>
+    <string name="password">Iphasiwedi</string>
+    <string name="logout">Phuma</string>
+    <string name="saved_events">Imicimbi Egciniwe</string>
+    <string name="add_event">Engeza Umcimbi</string>
+    <string name="settings">Izilungiselelo</string>
+    <string name="description">Incazelo</string>
+    <string name="location">Indawo</string>
+    <string name="create_event">Dala Umcimbi</string>
+    <string name="error_fill_fields">Sicela ugcwalise zonke izinkambu</string>
+    <string name="event_created">Umcimbi udalwe ngempumelelo!</string>
+</resources>

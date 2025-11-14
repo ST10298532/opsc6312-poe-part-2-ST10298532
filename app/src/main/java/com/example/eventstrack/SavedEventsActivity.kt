@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eventstrack.api.*
-
+import com.example.eventstrack.utils.LocaleHelper
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -20,6 +20,11 @@ class SavedEventsActivity : AppCompatActivity() {
     private lateinit var adapter: EventAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Load saved language preference
+        val prefs = getSharedPreferences("settings", MODE_PRIVATE)
+        val lang = prefs.getString("language", "en")
+        LocaleHelper.setLocale(this, lang!!)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_saved_events)
 
@@ -27,11 +32,11 @@ class SavedEventsActivity : AppCompatActivity() {
         progressBar = findViewById(R.id.progressBarSaved)
 
         adapter = EventAdapter(emptyList(), this) { event, isSaved ->
-            val prefs = getSharedPreferences("saved_events", MODE_PRIVATE)
-            val saved = prefs.getStringSet("event_ids", mutableSetOf())?.toMutableSet() ?: mutableSetOf()
+            val savedPrefs = getSharedPreferences("saved_events", MODE_PRIVATE)
+            val saved = savedPrefs.getStringSet("event_ids", mutableSetOf())?.toMutableSet() ?: mutableSetOf()
 
             saved.remove(event.id.toString())
-            prefs.edit().putStringSet("event_ids", saved).apply()
+            savedPrefs.edit().putStringSet("event_ids", saved).apply()
 
             Toast.makeText(this, "Removed from saved", Toast.LENGTH_SHORT).show()
             loadSavedEvents() // Refresh list
@@ -46,7 +51,6 @@ class SavedEventsActivity : AppCompatActivity() {
     private fun loadSavedEvents() {
         progressBar.visibility = View.VISIBLE
 
-        // Load saved IDs from SharedPreferences
         val prefs = getSharedPreferences("saved_events", MODE_PRIVATE)
         val savedIds = prefs.getStringSet("event_ids", emptySet()) ?: emptySet()
 

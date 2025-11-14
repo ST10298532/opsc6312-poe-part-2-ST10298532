@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.eventstrack.api.*
-
+import com.example.eventstrack.utils.LocaleHelper
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -12,6 +12,11 @@ import retrofit2.Response
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Load saved language preference
+        val prefs = getSharedPreferences("settings", MODE_PRIVATE)
+        val lang = prefs.getString("language", "en")
+        LocaleHelper.setLocale(this, lang!!)
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 

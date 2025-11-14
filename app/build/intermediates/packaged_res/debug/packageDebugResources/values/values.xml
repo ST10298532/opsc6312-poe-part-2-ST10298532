@@ -3,7 +3,18 @@
     <color name="black">#FF000000</color>
     <color name="purple_500">#6200EE</color>
     <color name="white">#FFFFFFFF</color>
-    <string name="app_name">Events Track</string>
+    <string name="app_name">EventsTrack</string>
+    <string name="events">Imicimbi</string>
+    <string name="gcm_defaultSenderId" translatable="false">780057089210</string>
+    <string name="google_api_key" translatable="false">AIzaSyBtd_psmjdyoXTMTZWw0TjTcAFhPM0VQhY</string>
+    <string name="google_app_id" translatable="false">1:780057089210:android:4d191b41105c6863325e83</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBtd_psmjdyoXTMTZWw0TjTcAFhPM0VQhY</string>
+    <string name="google_storage_bucket" translatable="false">eventstrack-9c201.firebasestorage.app</string>
+    <string name="language">Ulimi</string>
+    <string name="login">Ngena</string>
+    <string name="project_id" translatable="false">eventstrack-9c201</string>
+    <string name="settings">Izilungiselelo</string>
+    <string name="sign_out">Phuma</string>
     <style name="Base.Theme.EventsTrack" parent="Theme.Material3.DayNight.NoActionBar">
         
         
